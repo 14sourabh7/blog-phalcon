@@ -9,16 +9,16 @@ class SignupController extends Controller
     {
         // return "Signup";
     }
-public function registerAction()
+    public function registerAction()
     {
         // return '<h1>registered</h1>';
         $user = new Users();
 
         $user->name = $this->request->getPost()['name'];
-        
+
         $user->password = $this->request->getPost()['password'];
         $user->email = $this->request->getPost()['email'];
-        $user->role = 'customer';
+        $user->role = 'user';
         $user->status = 'restricted';
 
         $success = $user->save();
@@ -26,7 +26,7 @@ public function registerAction()
         $data = Users::find(["email = '$email'"]);
         return json_encode($data);
     }
-    
+
     public function checkemailAction()
     {
         $email = $this->request->getPost()['email'];

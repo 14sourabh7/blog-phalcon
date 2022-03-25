@@ -9,6 +9,12 @@ class SignupController extends Controller
     {
         // return "Signup";
     }
+
+    /**
+     * action to register user
+     *
+     * @return void
+     */
     public function registerAction()
     {
         // return '<h1>registered</h1>';
@@ -27,6 +33,11 @@ class SignupController extends Controller
         return json_encode($data);
     }
 
+    /**
+     * action to check mail already exists
+     *
+     * @return void
+     */
     public function checkemailAction()
     {
         $email = $this->request->getPost()['email'];

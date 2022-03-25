@@ -8,6 +8,12 @@ class DashboardController extends Controller
     public function indexAction()
     {
     }
+
+    /**
+     * action to handle to various dashboard operations
+     *
+     * @return void
+     */
     public function operationAction()
     {
         $user = new Users();

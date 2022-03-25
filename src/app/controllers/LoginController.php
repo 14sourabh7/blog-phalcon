@@ -6,10 +6,16 @@ class LoginController extends Controller
 {
     public function indexAction()
     {
-        //return '<h1>Hello!!!</h1>';
     }
-    public function checkuserAction(){
-         $user = new Users();
+
+    /**
+     * action to verify user credentials for login
+     *
+     * @return void
+     */
+    public function checkuserAction()
+    {
+        $user = new Users();
         $email = $this->request->getPost()['email'];
         $password = $this->request->getPost()['password'];
         return $user->checkUser($email, $password);

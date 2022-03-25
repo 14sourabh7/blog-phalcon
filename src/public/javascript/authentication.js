@@ -1,7 +1,7 @@
 $(document).ready(function () {
-  // if (sessionStorage.getItem("login") == 1) {
-  //   location.replace("/");
-  // }
+  if (sessionStorage.getItem("login") == 1) {
+    location.replace("/");
+  }
 
   var re = /\S+@\S+\.\S+/;
   $(".signin").click(function () {

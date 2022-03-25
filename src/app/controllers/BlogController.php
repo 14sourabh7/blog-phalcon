@@ -7,11 +7,12 @@ class BLogController extends Controller
 {
     public function indexAction()
     {
-       
     }
-    public function getblogAction(){
+
+    public function getblogAction()
+    {
         $blog = new Blogs();
-         $id = $_POST['blog_id'];
+        $id = $_POST['blog_id'];
         return $blog->getBlog($id);
     }
 }

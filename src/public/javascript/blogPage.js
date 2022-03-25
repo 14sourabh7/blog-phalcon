@@ -5,6 +5,7 @@ $(document).ready(function () {
     $(".authButton").html("SignIn");
   }
 
+  //condition to check is user logged in
   $(".authButton").click(function () {
     if (sessionStorage.getItem("login") == 1) {
       sessionStorage.removeItem("login");
@@ -12,6 +13,9 @@ $(document).ready(function () {
     location.replace("/login");
   });
 
+  /**
+   * ajax call to get particular blog
+   */
   $.ajax({
     url: "/blog/getblog",
     method: "post",
